@@ -1,7 +1,8 @@
 %% visualization part 2
 % gcf, gca
-% 
+
 %% gcf
+close all
 
 x = linspace(-2*pi,2*pi);
 y1 = sin(x);
@@ -16,8 +17,9 @@ legend({'sin', 'cos'});
 
 % fig = gcf returns the current figure handle
 gcf
-x = get(gcf, 'Position')
-set(gcf, 'Position', x, 'color', 'w')
+gcf_pos = get(gcf, 'Position')
+gcf_pos = [1522 629 411 356];
+set(gcf, 'Position', gcf_pos, 'color', 'w')
 
 %% gca
 clf
